@@ -2,10 +2,6 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
-# Devise gem instruction number 4 regarding deploying Rails 3.1 on Heroku.
-# This forces your application to not access the DB or load models when precompiling your assets.
-config.assets.initialize_on_precompile = false
-
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
   Bundler.require(*Rails.groups(:assets => %w(development test)))
@@ -62,5 +58,9 @@ module RedditOnRails
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Devise gem instruction number 4 regarding deploying Rails 3.1 on Heroku.
+    # This forces your application to not access the DB or load models when precompiling your assets.
+    config.assets.initialize_on_precompile = false
   end
 end
