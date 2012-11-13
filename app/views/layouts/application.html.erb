@@ -9,7 +9,8 @@
   <body>
   	<p class="notice"><%= notice %></p>
    	<p class="alert"><%= alert %></p>
-  	<%= yield %>
+  	
+    <%= yield %>
   
     <%# user is logged in, show log out link %>
     <% if current_user.present? %>
