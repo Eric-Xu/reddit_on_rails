@@ -15,6 +15,9 @@ end
 # Use Devise for user authentication
 gem 'devise'
 
+# Install the will paginate gem
+gem 'will_paginate', '~> 3.0.0'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
