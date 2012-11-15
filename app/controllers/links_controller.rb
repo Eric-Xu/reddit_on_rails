@@ -12,7 +12,7 @@ class LinksController < ApplicationController
 
   	respond_to do |format|
   	  if @link.save
-   	    format.html { render :action => "show" }
+   	    format.html { render :action => "create" }
   	    format.json { render :json => @link }
   	  else
   	  	format.html { render :action => "new" }
