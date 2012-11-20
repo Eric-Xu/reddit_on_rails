@@ -7,7 +7,7 @@
   	
   	<%# Let a user know when they have voted for a link and whether %>
   	<%# they voted up or down by changing the "+/-" to a "*" and    %>
-  	<%# making it not click-able. 									%>
+  	<%# making it not click-able. 									                %>
   	<% if current_user && current_user.votes.where(:link_id => link.id, :up => true).present? %>
       *
   	<% else %>
