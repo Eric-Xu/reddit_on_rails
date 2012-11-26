@@ -67,30 +67,24 @@
           <!-- /// -->
         </div>
       </div>
-    </div>
+    </div> 
 
     <div class="container" id="getting-started">
-      <div class="row">
-        
+      <div class="row">        
         <div class="span6 offset2">
           <div class="page-header"></div>
-          <!-- yield will pull everything from index.html.erb -->
+          <!-- yield pulls from the index page -->
           <%= yield %>
         </div>
-
-        <%= content_for :sidebar do %>
-          <p>Experimenting with the sidebar.</p>
-        <% end %>
-
-        <%= content_for :sidebar do %>
-          <%= link_to "Awesome Blog", 'http://schneems.com' %>
-        <% end %>
-        
+        <!-- populate a sidebar only if sidebar content has been created on the index page -->
         <% if content_for?(:sidebar) %>
-          <div class="span2">
+          <div class="span3">
             <div class="page-header"></div>
             <h2>Sidebar</h2>
-            <%= yield :sidebar %>
+            <p>Regular sidebar stuff</p>
+            <div class="page-specific-sidebar">
+              <%= yield :sidebar %>
+            </div>
           </div>
         <% end %>
       </div>

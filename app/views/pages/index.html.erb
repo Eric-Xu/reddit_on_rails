@@ -27,3 +27,10 @@
 
 <p><%= will_paginate @links %></p>
 <%= link_to "Add a link", new_link_path %>
+
+<%= content_for :sidebar do %>
+  <ul>
+    <li>list from content_for :sidebar</li>
+    <li><%= link_to "Awesome Blog", 'http://schneems.com' %></li>
+  </ul>  
+<% end %>
