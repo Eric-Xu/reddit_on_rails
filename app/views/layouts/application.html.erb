@@ -59,6 +59,10 @@
               <% end %>
             </ul>
           </div>
+          <%= form_tag(search_path, :method => "get", :style => "margin: 5px 0 0 0") do %>
+            <%= text_field_tag(:q, nil, :placeholder => "search...") %>
+            <%= submit_tag("Search") %>
+          <% end %>
           <!--
             IMPORTANT:
             This is Heroku specific markup. Remove to customize.
@@ -73,10 +77,10 @@
       <div class="row">        
         <div class="span6 offset2">
           <div class="page-header"></div>
-          <!-- yield pulls from the index page -->
+          <!-- yield pulls from the pages#index page -->
           <%= yield %>
         </div>
-        <!-- populate a sidebar only if sidebar content has been created on the index page -->
+        <!-- populate a sidebar only if sidebar content has been created on the pages#index page -->
         <% if content_for?(:sidebar) %>
           <div class="span3">
             <div class="page-header"></div>

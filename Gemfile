@@ -18,6 +18,9 @@ gem 'devise'
 # Install the will paginate gem
 gem 'will_paginate', '~> 3.0.0'
 
+# Adding search functionalties using the Texticle Gem
+gem 'texticle', :require => 'texticle/rails'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
