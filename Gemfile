@@ -5,11 +5,16 @@ gem 'rails', '3.2.6'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-group :development, :test do
+group :development do
   gem 'pg'
 end
 group :production do
   gem 'pg'
+end
+group :test do
+  gem 'database_cleaner'
+  gem 'capybara', '~> 1.1.2'
+  gem 'launchy'
 end
 
 # Use Devise for user authentication
